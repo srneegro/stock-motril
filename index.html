@@ -501,10 +501,12 @@
     }
     .family-select:focus { outline: none; border-color: var(--accent); }
 
-    /* GRID: 1 columna cómoda en móvil, 2 en tablets, 3 o 4 en PC */
+    /* GRID: 1 columna cómoda en móvil, 2 en tablets, 3 o 4 en PC.
+       auto-fit (no auto-fill) para que, si hay pocas fichas, se estiren y ocupen
+       todo el ancho en vez de dejar huecos vacíos al lado. */
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 8px;
     }
 
